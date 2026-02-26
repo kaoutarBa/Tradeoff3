@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import { StyleSheet, Text, View, Switch, SwitchComponent } from 'react-native';
+import { StyleSheet, Text, View, Switch } from 'react-native';
 import React, { useState } from 'react';
 
 export default function App() {
@@ -53,7 +53,7 @@ export default function App() {
             <Text style={[styles.textStyle, isAEnabled ? { color: '#333' } : { color: '#999' }]}>Time</Text>
             <Switch
               trackColor={{ false: "#767577", true: "#ebe836" }}
-              thumbColor={isCEnabled ? "#48be48" : "#f4f3f4"}
+              thumbColor={isAEnabled ? "#48be48" : "#f4f3f4"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={handleChangeA}
               value={isAEnabled}
@@ -63,7 +63,7 @@ export default function App() {
             <Text style={[styles.textStyle, isBEnabled ? { color: '#333' } : { color: '#999' }]}>Money</Text>
             <Switch
               trackColor={{ false: "#767577", true: "#ebe836" }}
-              thumbColor={isCEnabled ? "#48be48" : "#f4f3f4"}
+              thumbColor={isBEnabled ? "#48be48" : "#f4f3f4"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={handleChangeB}
               value={isBEnabled}
@@ -81,7 +81,7 @@ export default function App() {
           </View>
         </View>
         <Text style={styles.textStyle}>Choose yours</Text>
-        <StatusBar style="auto" />
+
       </SafeAreaView>
     </SafeAreaProvider>
   );
